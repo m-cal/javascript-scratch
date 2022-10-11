@@ -1,21 +1,9 @@
-// Credential check conditionals
+let firstName = 'Spongebob';
+let lastName = 'Squarepants';
+let fullName = `${firstName} ${lastName}`;
+let currentYear = 2022;
+let birthYear = 1999;
+let age = currentYear - birthYear;
+let greeting = `${fullName} was born in ${birthYear}. It is now ${currentYear}. This means he is ${age} years old!`
 
-let userName = prompt("Who is it?", '');
-
-if (userName === 'admin') {
-
-  let pass = prompt('Password?', '');
-
-  if (pass === '101TallGiraffes') {
-    alert( 'Welcome!' );
-  } else if (pass === '' || pass === null) {
-    alert( 'Canceled' );
-  } else {
-    alert( 'Wrong password' );
-  }
-
-} else if (userName === '' || userName === null) {
-  alert( 'Canceled' );
-} else {
-  alert( "I don't know you" );
-}
+console.log(greeting);
