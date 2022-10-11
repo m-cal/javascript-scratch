@@ -1,18 +1,62 @@
-//basic arithmatic + variable assignment
+//conditional muscle memory
 
-console.log(10 + 100);
-console.log (1 + 2, 1 + 3, 1 + 4, 1 + 5, 1 + 6);
-console.log((4 + 6 + 9) / 77);
+result = a || b;
 
-let a = 10;
+alert( true || true );   // true
+alert( false || true );  // true
+alert( true || false );  // true
+alert( false || false ); // false
 
-console.log(a);
-console.log(9 * a);
+let hour = 9;
 
-let b = 7 * a;
-console.log(b);
+if (hour < 10 || hour > 18) {
+  alert( 'The office is closed.' );
+}
 
-const max = 57;
-let actual = max - 13;
-let percentage = actual / max;
-console.log(percentage)
+
+hour = 12;
+let isWeekend = true;
+
+if (hour < 10 || hour > 18 || isWeekend) {
+  alert( 'The office is closed.' ); // it is the weekend
+}
+
+result = value1 || value2 || value3;
+
+alert( 1 || 0 ); // 1 (1 is truthy)
+
+alert( null || 1 ); // 1 (1 is the first truthy value)
+alert( null || 0 || 1 ); // 1 (the first truthy value)
+
+alert( undefined || null || 0 ); // 0 (all falsy, returns the last value)
+
+let firstName = "";
+let lastName = "";
+let nickName = "SuperCoder";
+
+alert( firstName || lastName || nickName || "Anonymous"); // SuperCoder
+
+true || alert("not printed");
+false || alert("printed");
+
+alert( true && true );   // true
+alert( false && true );  // false
+alert( true && false );  // false
+alert( false && false ); // false
+
+hour = 12;
+let minute = 30;
+
+if (hour == 12 && minute == 30) {
+  alert( 'The time is 12:30' );
+}
+
+// if the first operand is truthy,
+// AND returns the second operand:
+alert( 1 && 0 ); // 0
+alert( 1 && 5 ); // 5
+
+// if the first operand is falsy,
+// AND returns it. The second operand is ignored
+alert( null && 5 ); // null
+alert( 0 && "no matter what" ); // 0
