@@ -1,18 +1,9 @@
-function squared(num) {
-  return num * num;
+function lCat(cat) {
+  return cat.startsWith('L');
 }
 
-function cubed(num) {
-  return num * num * num;
-}
+const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
 
-function factorial(num) {
-  if (num < 0) return undefined;
-  if (num === 0) return 1;
-  let x = num - 1;
-  while (x > 1) {
-    num *= x;
-    x--;
-  }
-  return num;
-}
+const filtered = cats.filter(lCat);
+
+console.log(filtered);
