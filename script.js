@@ -1,9 +1,10 @@
-function lCat(cat) {
-  return cat.startsWith('L');
+const myButton = document.querySelector('button');
+
+function random(number) {
+  return Math.floor(Math.random() * (number+1));
 }
 
-const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
-
-const filtered = cats.filter(lCat);
-
-console.log(filtered);
+myButton.addEventListener('click', () => {
+  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  document.body.style.backgroundColor = rndCol;
+});
