@@ -1,10 +1,33 @@
-const myButton = document.querySelector('button');
+const input = document.querySelector('.numberInput');
+const para = document.querySelector('p');
 
-function random(number) {
-  return Math.floor(Math.random() * (number+1));
+function squared(num) {
+  return num * num; 
 }
 
-myButton.addEventListener('click', () => {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
-  document.body.style.backgroundColor = rndCol;
+function cubed(num) {
+  return num * num * num;
+}
+
+function factorial(num) {
+  if (num < 0) return undefined;
+  if (num === 0) return 1;
+  let x = num -1;
+  while (x > 1) {
+    num *= x;
+    x--;
+  }
+  return num;
+}
+
+input.addEventListener('change', () => {
+  const num = parseFloat(input.value);
+  if (isNaN(num)) {
+    para.textContent = 'You need to enter a number!';
+  } else {
+    para.textContent = `${num} squared is ${squared(num)}.`;
+    para.textContent += `${num} cubed is ${cubed(num)}.`;
+    para.textContent += `${num} factorial is ${factorial(num)}.`
+  }
 });
+
