@@ -1,8 +1,18 @@
+ num = prompt('Enter a number to be FizzBuzz\'d');
+
+FizzBuzz(num);
+
 function FizzBuzz(num) {
-  (num % 3 == 0) && (num % 5 == 0) ? console.log('FizzBuzz') :
-  (num % 3 == 0) ? console.log('Fizz') :
-  (num % 5 == 0) ? console.log('Buzz') :
-  console.log(num);
+  let list = '';
+  
+  for (let i = 1; i <= num; i++) {
+    (i % 3 == 0) && (i % 5 == 0) ? list += ' FizzBuzz' :
+    (i % 3 == 0) ? list += ' Fizz':
+    (i % 5 == 0) ? list += ' Buzz':
+    list += ` ${i}`;
+  }
+  alert(list);
 }
 
-FizzBuzz(15);
+
+
