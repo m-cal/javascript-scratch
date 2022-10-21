@@ -4,3 +4,13 @@ body {
   background-color: #1e1e1e;
   color: white;
 }
+
+.test {
+  width:100px;
+  height: 100px;
+  background-color: white;
+  margin: auto;
+  margin-top: 20%;
+  border: 15px pink solid;
+  border-radius: 50%;
+}
