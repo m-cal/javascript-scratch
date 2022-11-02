@@ -10,19 +10,23 @@
 </head>
 <body>
   <div class="container">
-    <h1>Planets Data</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <ul>
-      <li>Earth</li>
-      <li>Saturn</li>
-      <li>Jupiter</li>
-      <li>Mars</li>
-      <li>Venus</li>
-    </ul>
-    <h2>Pluto is not a planet</h2>
+    <form action="http://httpbin.org/post" method="post">
+      <fieldset>
+        <legend>Contact</legend>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="John Doe"><br>
+
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email" placeholder="johndoe@something.com"><br>
+
+        <label for="message">Message:</label><br>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea><br>
+
+        <button type="submit">Send your message</button>
+      </fieldset> 
+    </form>
   </div>
+</body>
 </html>
 </body>
 </html>
