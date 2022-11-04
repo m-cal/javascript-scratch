@@ -1,7 +1,14 @@
-function setTheme() {
-  const root = document.documentElement;
-  const newTheme = root.className === 'dark' ? 'light' : 'dark';
-  root.className = newTheme;
-}
+/* 
 
-document.querySelector('.theme-toggle').addEventListener('click', setTheme);
+given word, return if it's palindrome (boolean)
+
+str -> letters, all lower, no specials, funny biz etc.
+
+*/
+
+const isPalindrome = word => word === word.split('').reverse().join('');
+
+console.log(isPalindrome('racecar'), 'true');
+console.log(isPalindrome('leonnoel'), 'true');
+console.log(isPalindrome('spongebob'), 'false');
+
